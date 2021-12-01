@@ -3,6 +3,7 @@
 //Input variables:
 var enter;
 var confirmLowercase;
+var confirmUppercase;
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -13,7 +14,7 @@ function writePassword() {
   enter = parseInt(prompt("How long would you like your password to be? Choose between 8 and 128 characters"));
   // If statement
   if (!enter) {
-      alert("You must type in a value. How many characters would you like in your password?");
+    alert("You must type in a value. How many characters would you like in your password?");
   } else if (enter <8 || enter > 128) {
       // Validates user input
       // Start user input prompts
@@ -24,6 +25,7 @@ function writePassword() {
       confirmLowercase = confirm("Would you like to include lowercase characters?");
   };
 
+  // password variable is an array placeholder for user generated amount of length
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
