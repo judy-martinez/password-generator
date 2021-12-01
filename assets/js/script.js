@@ -16,7 +16,7 @@ var generateBtn = document.querySelector("#generate");
 // Write password to the #password input
 function writePassword() {
   // User Input
-  pwLength = parseInt(prompt("How long would you like your password to be? Choose between 8 and 128 characters"));
+  pwLength = prompt("How long would you like your password to be? Choose between 8 and 128 characters");
   // If statement
   if (!pwLength) {
     alert("You must type in a value. How many characters would you like in your password?");
