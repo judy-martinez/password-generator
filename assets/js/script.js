@@ -4,6 +4,7 @@
 var enter;
 var confirmLowercase;
 var confirmUppercase;
+var confirmNumber;
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
