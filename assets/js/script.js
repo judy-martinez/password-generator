@@ -26,7 +26,8 @@ function writePassword() {
       //Goes on when user input is validated
       confirmLowercase = confirm("Would you like to include lowercase characters?");
       confirmUppercase = confirm("Would you like to include uppercase characters?");
-      confirmNumber = confirm("Wwould you like to include numbers?");
+      confirmNumber = confirm("Would you like to include numbers?");
+      confirmCharacter = confirm("Would you like to include special characters?")
   };
 
   // password variable is an array placeholder for user generated amount of length
