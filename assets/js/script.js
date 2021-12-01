@@ -1,11 +1,14 @@
 // Assignment code here
 
 //Input variables:
-var enter;
+var pwLength;
 var confirmLowercase;
 var confirmUppercase;
 var confirmNumber;
 var confirmCharacter;
+
+//Password variable values
+//
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -13,14 +16,14 @@ var generateBtn = document.querySelector("#generate");
 // Write password to the #password input
 function writePassword() {
   // User Input
-  enter = parseInt(prompt("How long would you like your password to be? Choose between 8 and 128 characters"));
+  pwLength = parseInt(prompt("How long would you like your password to be? Choose between 8 and 128 characters"));
   // If statement
-  if (!enter) {
+  if (!pwLength) {
     alert("You must type in a value. How many characters would you like in your password?");
-  } else if (enter <8 || enter > 128) {
+  } else if (pwLength <8 || pwLength > 128) {
       // Validates user input
       // Start user input prompts
-      enter = parseInt(prompt("You must choose between 8 and 128 characters"));
+      pwLength = parseInt(prompt("You must choose between 8 and 128 characters"));
 
   } else {
       //Goes on when user input is validated
@@ -38,8 +41,10 @@ function writePassword() {
 
 }
 
+//
+
 // Add event listener to generate button
-generateBtn.addEventListener("click", function (){
+generateBtn.addEventListener("click", function () {
   ps = writePassword();
   document.getElementsByClassName("password").placeholder = ps;
 });
