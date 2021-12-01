@@ -1,4 +1,6 @@
 // Assignment code here
+// Get references to the #generate element
+var generateBtn = document.querySelector("#generate");
 
 //Input variables:
 var pwLength;
@@ -12,17 +14,16 @@ letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n",
 number = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 character = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", " < ", "=", " > ", " ? ", "@", "[", "\\", "]", " ^ ", "_", "`", "{", "|", "}", "~"];
 
-// Get references to the #generate element
-var generateBtn = document.querySelector("#generate");
-
 // Write password to the #password input
 function writePassword() {
   // User Input
-  pwLength = prompt("How long would you like your password to be? Choose between 8 and 128 characters");
+  var pwLength = prompt("How long would you like your password to be? Choose between 8 and 128 characters");
+
   // First if statement
-  if (pwLength <8 || pwLength > 128) {
-    // Validates user input
-    // Start user input prompts
+  if (pwLength < 8 || pwLength > 128 ) {
+      // Validates user input
+      // Start user input prompts
+
   } else {
     //Goes on when user input is validated
     confirmLowercase = confirm("Would you like to include lowercase characters?");
@@ -32,8 +33,9 @@ function writePassword() {
   };
 
   // Else If for invalid options
-  if (!confirmLowercase && !confirmUppercase && !confirmCharacter) {
-    
+  if (!confirmLowercase && !confirmUppercase && !confirmNumber && !confirmCharacter) {
+      options = alert("Sorry, you must choose criteria for a password to be generated");
+      return;    
   }
 
   // password variable is an array placeholder for user generated amount of length
