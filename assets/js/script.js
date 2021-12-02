@@ -3,12 +3,6 @@
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
-
-
-
-
-//password variable values
-
 // Start fuction to write password
 function writePassword() {
   var password = generatePassword();
@@ -40,9 +34,17 @@ var lowerCase = "abcdefghiklmnopqrsttuvwxtz".split("");
 var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 var numberInt = "0123456789".split("");
 var specialChar = "*&^%$#@!?><{}".split("");
-  
-}
+
+// This is a confirm asking user if they want lowercase
+var lowerCaseConfirm = confirm("Do you want to include lowercase letters in your password?");
+  if(lowerCaseConfirm === true) {
+    for (var i = 0; i < lowerCase.length; i++) {
+      collectionOfChar.push(lowerCase[i]);
+    }
+  }
+
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-//*ask about parseInt*
+}
