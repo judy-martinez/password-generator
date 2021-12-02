@@ -66,6 +66,19 @@ var specialCharConfirm = confirm("Do you want to include special charcters in yo
       collectionOfChar.push(specialChar[i]);
     }   
   }
+
+// generate password using number/length + 4 booleans
+  var randomPassword = "";
+  for (var i = 0; i < lengthConfirm; i++) {
+    collectionOfChar[
+      Math.floor(Math.random() * collectionOfChar.length)];
+    randomPassword +=
+      collectionOfChar[
+        Math.floor(Math.random() * collectionOfChar.length)
+      ];
+    }
+  return randomPassword;
+}
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
