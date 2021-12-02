@@ -3,18 +3,9 @@
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
-// Split is a string function that splits the string of characters instead of typing everything out in array
-//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split
-var collectionOfChar = [];
-var pwLength;
-var confirmLowercase;
-"abcdefghiklmnopqrsttuvwxtz".split("");
-var confirmUppercase;
-"ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
-var confirmNumber;
-"0123456789".split("");
-var confirmCharacter;
-"*&^%$#@!?><{}".split("");
+
+
+
 
 //password variable values
 
@@ -38,30 +29,17 @@ function generatePassword() {
     return;
     // Validates user input
     // Start user input prompts
-  } else {
-    //Goes on when user input is validated
-    confirmLowercase = confirm(
-      "Would you like to include lowercase characters?"
-    );
-    confirmUppercase = confirm(
-      "Would you like to include uppercase characters?"
-    );
-    confirmNumber = confirm("Would you like to include numbers?");
-    confirmCharacter = confirm("Would you like to include special characters?");
-  }
-
-  // Else If for invalid options
-  if (
-    !confirmLowercase &&
-    !confirmUppercase &&
-    !confirmNumber &&
-    !confirmCharacter
-  ) {
-    options = alert(
-      "Sorry, you must choose criteria for a password to be generated"
-    );
-    return;
-  }
+  } 
+  
+//paste variables here
+// Split is a string function that splits the string of characters instead of typing everything out in array
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split
+var collectionOfChar = [];
+var confirmLowercase = "abcdefghiklmnopqrsttuvwxtz".split("");
+var confirmUppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+var confirmNumber = "0123456789".split("");
+var confirmCharacter = "*&^%$#@!?><{}".split("");
+  
 }
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
