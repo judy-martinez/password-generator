@@ -35,7 +35,7 @@ var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 var numberInt = "0123456789".split("");
 var specialChar = "*&^%$#@!?><{}".split("");
 
-// This is a confirm asking user if they want lowercase
+// This is a confirm asking user if they want lowercase in password
 var lowerCaseConfirm = confirm("Do you want to include lowercase letters in your password?");
   if(lowerCaseConfirm === true) {
     for (var i = 0; i < lowerCase.length; i++) {
@@ -43,7 +43,13 @@ var lowerCaseConfirm = confirm("Do you want to include lowercase letters in your
     }
   }
 
-
+// This is a confirm asking user if they want uppercase in password
+var upperCaseConfirm = confirm("Do you want to include uppercase letters in your password?");
+  if (upperCaseConfirm === true) {
+    for (var i = 0; i <upperCase.length; i++) {
+        collectionOfChar.push(upperCase[i]);
+    }
+  }
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
