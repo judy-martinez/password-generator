@@ -21,7 +21,7 @@ function generatePassword() {
 
   // Choose length of password b/w 8 & 128. First if statement.
   if (pwLength < 8 || pwLength > 128 || isNaN(pwLength)) {
-    alert("Error. Please enter a value between 8 and 128.");
+    alert ("Error. Please enter a value between 8 and 128.");
     return;
     // Validates user input
     // Start user input prompts
@@ -49,6 +49,14 @@ var upperCaseConfirm = confirm("Do you want to include uppercase letters in your
     for (var i = 0; i <upperCase.length; i++) {
         collectionOfChar.push(upperCase[i]);
     }
+  }
+
+//This is a confirm asking user if they want numbers in their password
+var numberIntConfirm = confirm("Do you want to include numbers in your password?");
+  if (numberIntConfirm === true ) {
+      for (var i = 0; i < numberInt.length; i++) {
+          collectionOfChar.push(numberInt[i]);
+      }
   }
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
