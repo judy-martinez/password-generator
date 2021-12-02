@@ -2,25 +2,25 @@
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
-//Input variables:
-var pwLength;
-var confirmLowercase;
-var confirmUppercase;
-var confirmNumber;
-var confirmCharacter;
+// Write password to the #password input
+
+var collectionOfChar = [];
+var pwLength; 
+var confirmLowercase; "abcdefghiklmnopqrsttuvwxtz" .split("");
+var confirmUppercase; "ABCDEFGHIJKLMNOPQRSTUVWXYZ" .split("");
+var confirmNumber; "0123456789" .split ("");
+var confirmCharacter; "*&^%$#@!?><{}" .split("");
 
 //password variable values
-letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-number = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-character = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", " < ", "=", " > ", " ? ", "@", "[", "\\", "]", " ^ ", "_", "`", "{", "|", "}", "~"];
 
-// Write password to the #password input
+// Start fuction to write password
 function writePassword() {
-  // User Input
+  // Prompts user Input
   var pwLength = prompt("How long would you like your password to be? Choose between 8 and 128 characters");
-
-  // First if statement
-  if (pwLength < 8 || pwLength > 128 ) {
+  // Choose length of password b/w 8 & 128. First if statement. 
+  if (pwLength < 8 || pwLength > 128 || isNaN(pwLength)) {
+      alert ("Error. Please enter a value between 8 and 128.");
+      return;
       // Validates user input
       // Start user input prompts
 
@@ -49,7 +49,4 @@ function writePassword() {
 //
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", function () {
-  ps = writePassword();
-  document.getElementsByClassName("password").placeholder = ps;
-});
+generateBtn.addEventListener("click", writePassword);
