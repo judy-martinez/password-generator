@@ -3,7 +3,8 @@
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
-
+// Split is a string function that splits the string of characters instead of typing everything out in array
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split
 var collectionOfChar = [];
 var pwLength;
 var confirmLowercase;
