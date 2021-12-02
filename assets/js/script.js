@@ -47,18 +47,25 @@ var lowerCaseConfirm = confirm("Do you want to include lowercase letters in your
 var upperCaseConfirm = confirm("Do you want to include uppercase letters in your password?");
   if (upperCaseConfirm === true) {
     for (var i = 0; i <upperCase.length; i++) {
-        collectionOfChar.push(upperCase[i]);
+      collectionOfChar.push(upperCase[i]);
     }
   }
 
 //This is a confirm asking user if they want numbers in their password
 var numberIntConfirm = confirm("Do you want to include numbers in your password?");
   if (numberIntConfirm === true ) {
-      for (var i = 0; i < numberInt.length; i++) {
-          collectionOfChar.push(numberInt[i]);
-      }
+    for (var i = 0; i < numberInt.length; i++) {
+      collectionOfChar.push(numberInt[i]);
+    }
+  }
+
+//This is a confirm asking user if they want special characters in their password
+var specialCharConfirm = confirm("Do you want to include special charcters in your password?");
+  if (specialCharConfirm === true) {
+    for (var i = 0; i < specialChar.length; i++) {
+      collectionOfChar.push(specialChar[i]);
+    }   
   }
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-}
